@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap') , 
+url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+$mobile: 23.4375rem;
+$desktop: 90rem;
+$bright-orange: hsl(31, 77%, 52%);
+$dark-cyan: hsl(184, 100%, 22%);
+$very-dark-cyan: hsl(179, 100%, 13%);
+$para-col: hsla(0, 0%, 100%, 0.75);
+$bg-heading-btn: hsl(0, 0%, 95%);
+$font-size-standard: 0.9375rem;
+
+@mixin centerItems ($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  @include centerItems(column);
+  min-height: 100vh;
+}
+
+main , h1{
+  color: $bg-heading-btn;
+}
+
+main{
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  @include centerItems(row);
+}
+
+p{
+  font-size: $font-size-standard;
+  color: $para-col;
+  width: 12.5rem;
+  line-height: 1.7;
+}
+
+h1{
+  font-family: 'Big Shoulders Display';
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+img{
+  width: 3.75rem;
+}
+
+.card{
+  @include centerItems(row);
+  
+
+  &__container{
+    padding: 3.5rem;
+    @include centerItems(column);
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+
+  &__sedans{
+    background-color: $bright-orange;
+    border-radius: 0.75rem 0 0 0.75rem;
+    
+    a{
+      color: $bright-orange;
+    }
+  }
+
+  &__suvs{
+    background-color: $dark-cyan;
+
+    a{
+      color: $dark-cyan;
+    }
+  }
+
+  &__luxary{
+    background-color: $very-dark-cyan;
+    border-radius: 0 0.75rem 0.75rem 0;
+
+    a{
+      color: $very-dark-cyan;
+    }
+  }
+}
+
+a{
+  padding: 0.75rem 1.625rem;
+  border-radius: 3rem;
+  margin-top: 3.125rem;
+  background-color: $bg-heading-btn;
+  color: $bg-heading-btn;
+  text-decoration: none;
+  border: 0.1875rem solid transparent;
+
+  &:hover{
+    background-color: transparent;
+    color: $bg-heading-btn;
+    border: 0.1875rem solid $bg-heading-btn;
+  }
+}
+
+
+
+
+@media (max-width: $mobile) {
+  p{
+    width: 14.375rem;
+  }
+  a{
+    margin-top: 0;
+
+    &:hover {
+      pointer-events: none;
+    }
+  }
+
+  .card{
+    @include centerItems(column);
+    
+  
+    &__container{
+      padding: 3rem;
+      @include centerItems(column);
+      align-items: flex-start;
+      gap: 1.75rem;
+    }
+  
+    &__sedans{
+      border-radius: 0.75rem 0.75rem 0 0;
+    }
+  
+    &__luxary{
+      border-radius: 0 0 0.75rem 0.75rem;
+    }
+  }
+}

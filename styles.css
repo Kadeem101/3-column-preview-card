@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main, h1 {
+  color: hsl(0deg, 0%, 95%);
+}
+
+main {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+p {
+  font-size: 0.9375rem;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  width: 12.5rem;
+  line-height: 1.7;
+}
+
+h1 {
+  font-family: "Big Shoulders Display";
+  font-size: 2.25rem;
+  text-transform: uppercase;
+}
+
+img {
+  width: 3.75rem;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.card__container {
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+.card__sedans {
+  background-color: hsl(31deg, 77%, 52%);
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+.card__sedans a {
+  color: hsl(31deg, 77%, 52%);
+}
+.card__suvs {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.card__suvs a {
+  color: hsl(184deg, 100%, 22%);
+}
+.card__luxary {
+  background-color: hsl(179deg, 100%, 13%);
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+.card__luxary a {
+  color: hsl(179deg, 100%, 13%);
+}
+
+a {
+  padding: 0.75rem 1.625rem;
+  border-radius: 3rem;
+  margin-top: 3.125rem;
+  background-color: hsl(0deg, 0%, 95%);
+  color: hsl(0deg, 0%, 95%);
+  text-decoration: none;
+  border: 0.1875rem solid transparent;
+}
+a:hover {
+  background-color: transparent;
+  color: hsl(0deg, 0%, 95%);
+  border: 0.1875rem solid hsl(0deg, 0%, 95%);
+}
+
+@media (max-width: 23.4375rem) {
+  p {
+    width: 14.375rem;
+  }
+  a {
+    margin-top: 0;
+  }
+  a:hover {
+    pointer-events: none;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card__container {
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.75rem;
+  }
+  .card__sedans {
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+  .card__luxary {
+    border-radius: 0 0 0.75rem 0.75rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
